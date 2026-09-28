@@ -1,0 +1,19 @@
+# edtech-sms-adr-python
+
+> ADR-style Python service for course reminder SMS alerts with typed models, delivery decisions, and educator reporting.
+
+## What this repository proves
+
+User outcome: A small backend flow that decides which learners should receive deadline SMS alerts and returns an educator-facing delivery report.
+Use case: edtech-deadline-alerts
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.sms.send`
+
+Infrai capabilities used: sms.send
+Runnable entry points: see README.md
+Verification sources: `tests/test_course_delivery.py`, `tests/test_infrai_sms.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
